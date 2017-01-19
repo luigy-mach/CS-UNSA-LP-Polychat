@@ -1,0 +1,37 @@
+<ion-view  cache-view="false" title="messages">
+
+
+
+ <ion-content has-bouncing="true" class="has-header has-footer" delegate-handle="userMessageScroll">
+           <div ng-repeat="mess in messages | orderBy:'sendAt':true" class="message-wrapper">
+
+             <ion-item  ng-click="goChatWith(mess.conversationId,mess.messId1,mess.messId2,mess.contact_id,mess.contact_name)"
+                        ng-if="mess.seen==false" class="item item-avatar"style="background-color: #B2BBEC;">
+                <img  src={{mess.photo}} >
+                <div class="message-header"><span class="bold">{{ mess.contact_name}}</span></div>
+                <div class="item-text-wrap message"> {{ mess.content}}</div>
+                <div class="message-detail">
+                    <span am-time-ago='mess.sendAt'></span><!--timer-->
+
+                </div>
+                <span ng-if="mess.count!=0" class="badge badge-assertive">{{mess.count}}</span>
+
+             </ion-item>
+
+
+             <ion-item  ng-click="goChatWith(mess.conversationId,mess.messId1,mess.messId2,mess.contact_id,mess.contact_name)"
+                        ng-if="mess.seen==true" class="item item-avatar">
+                <img src={{mess.photo}} >
+                <div class="message-header"><span class="bold">{{ mess.contact_name}}</span></div>
+                <div class="item-text-wrap message"> {{ mess.content}}</div>
+                <div class="message-detail">
+                    <span am-time-ago='mess.sendAt'></span><!--timer-->
+                </div>
+                <!-- <span ng-if="mess.count!=0" class="badge badge-assertive">{{mess.count}}</span> -->
+             </ion-item>
+
+
+        </div>
+    </ion-content>
+
+</ion-view>

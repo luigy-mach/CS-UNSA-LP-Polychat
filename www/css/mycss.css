@@ -1,0 +1,498 @@
+@charset "UTF-8";
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+/*+++++++++++++++++++++++++++++++ POLYCHAT START +++++++++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
+
+  /* color de whatssap #009686   */
+:root{
+  --color-chat-myUser: #E3FFCA;
+  --color-chat-toUser: #EFE6DF;
+}
+
+.ionic_ratings .read_only {
+  pointer-events:none !important;
+}
+/*tamaño estrellas */
+.ionic_ratings .icon {
+   font-size: 35px; /*tamaño estrellas*/
+ }
+
+.ionic_ratings2 .icon {
+    font-size: 25px; /*tamaño estrellas*/
+    width: 26px;
+    /*position: relative;*/
+  }
+
+
+
+ .buttonCenter{
+     /*text-align: center;*/
+
+
+
+
+ }
+
+
+ #center{
+     text-align: center;*/
+     /*float: center;*/
+ }
+
+
+
+
+ .chat-bubble-you {
+   display: inline-block;
+   word-break: break-word;
+   white-space:normal;
+
+   border-radius: 15px;
+   padding: 10px 18px;
+   position: relative;
+   margin: -5px; /*margen cuadrado mensaje*/
+
+   max-width: 70%;
+   text-align: justify;
+
+ }
+
+ .chat-bubble-me {
+   display: inline-block;
+   word-break: break-word;
+   white-space:normal;
+
+   border-radius: 15px;
+   padding: 10px 18px;
+   position: relative;
+   margin: -5px; /*margen cuadrado mensaje*/
+
+   max-width: 70%;
+   text-align: justify;
+
+ }
+
+ .chat-bubble-me.right-me {
+   background-color: var(--color-chat-myUser);
+   /*color: #fff;*/
+   float: right;
+   margin-right: -45px;
+ }
+
+
+
+
+
+
+.chat-bubble {
+  display: inline-block;
+  word-break: break-word;
+  white-space:normal;
+
+  border-radius: 15px;
+  padding: 10px 18px;
+  position: relative;
+  margin: -5px; /*margen cuadrado mensaje*/
+
+  max-width: 70%;
+  text-align: justify;
+
+}
+
+.chat-bubble:before {
+  content: "\00a0";
+  display: block;
+  height: 16px;
+  width: 9px;
+  position: absolute;
+  bottom: -7.5px;
+}
+
+.chat-bubble.left {
+  background-color: var(--color-chat-toUser);
+  float: left;
+  margin-left: 5px;
+}
+
+.chat-bubble.left:before {
+  /*background-color: var(--color-chat-toUser);*/
+  /*left: 10px;*/
+  /*-webkit-transform: rotate(70deg) skew(5deg);*/
+}
+
+.chat-bubble.right {
+  background-color: var(--color-chat-myUser);
+  /*color: #fff;*/
+  float: right;
+  margin-right: 5px;
+}
+
+.chat-bubble.right:before {
+  /*background-color: var(--color-chat-toUser);*/
+  /*right: 10px;*/
+  /*-webkit-transform: rotate(118deg) skew(-5deg);*/
+}
+
+
+.chat-bubble.right a.autolinker {
+  color: #fff;
+  font-weight: bold;
+}
+
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++++++++++ POLYCHAT END +++++++++++++++++++++++++++++*/
+
+/**----------------prueba-------------------------*/
+
+
+/*
+.div-img
+{
+    background: color url('img/que-no-pare-la-fiesta.gif') others;
+}*/
+
+ion-popover-view.fit {
+  height: 163px;
+}
+
+.right{
+  float: right;
+}
+
+.button-right{
+  float:right;
+  text-align:right;
+}
+
+.popover-opacity {
+    /*background-color:rgba(255,0,0,0.5);*/
+    /*color:#fff;*/
+    background:#000;
+    opacity:0.4;
+
+}
+
+
+#profile-bg {
+        position: fixed;
+        left: 0;
+        top: -150px;
+        width: 100%;
+        /*height: 20px;*/
+        /*background-image: url("img/homero.jpg");*/
+        /*background-color: red;*/
+        /*background: color url('.../img/homero.jpg') others;*/
+        opacity: 0.7;
+        /*background: url('img/homero.jpg') no-repeat transparent;*/
+        /*background-size: 100%;*/
+        /*background-position: 50% 20%;*/
+        text-align: center;  /*primero texto*/
+      }
+
+#content {
+  position: relative;
+  margin-top: 150px;
+  background-color: #E6E6E6;
+  box-shadow: 0px -1px 10px rgba(0,0,0,0.4);
+  padding-top: 250px; /*tamaño espacio*/
+}
+
+#profile-info {
+  position: absolute;
+  top: -95px;
+  width: 100%;
+  /*z-index: 2;*/
+  text-align: center;
+}
+#profile-name {
+  color: #444;
+  font-size: 26px;
+}
+#profile-image {
+  border-radius: 100px;
+  display: block;
+  border: 3px solid #fff;
+  width: 160px;
+  height: 160px;
+  margin: 30px auto 0;
+  box-shadow: 0px 0px 4px rgba(0,0,0,0.7);
+}
+
+
+
+#profile-description {
+  font-size: 15px;
+  color: #888;
+}
+#profile-description a {
+  color: #888;
+}
+
+
+.list-item-content {
+  padding: 5px;
+}
+
+.list-item {
+  color: #666666;
+}
+
+.post {
+  color: #444;
+}
+
+.post-time {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-size: 11px;
+  color: #888;
+}
+
+.post-profile-image {
+  display: inline-block;
+  vertical-align: top;
+  width: 48px;
+  height: 48px;
+  margin-right: 10px;
+}
+.post-options {
+  position: absolute;
+  font-size: 16px;
+  right: 5px;
+  bottom: 5px;
+  color: #888;
+}
+
+
+.bar-footer {
+  overflow: visible !important;
+}
+
+.bar-footer textarea {
+  resize: none;
+  height: 25px;
+}
+
+/* fixes an ios bug bear */
+button.ion-android-send {
+  padding-top: 2px;
+}
+
+/* add this to keep your footer buttons down
+at the bottom as the textarea resizes */
+.footer-btn-wrap {
+  position: relative;
+  height: 100%;
+  width: 50px;
+  top: 7px;
+}
+
+.footer-btn {
+  position: absolute !important;
+  bottom: 0;
+}
+
+
+
+/* chat personal */
+img.pic-message-personal {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  bottom: 10px;
+}
+
+img.pic-message-personal.left {
+  left: 20px;
+  top: 15px;
+}
+
+img.pic-message-personal.right {
+  right: 20px;
+  top: 15px;
+}
+
+
+/*chat global*/
+img.pic-message-global {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  bottom: 10px;
+}
+
+img.pic-message-global.left {
+  left: 20px;
+  top: 25px;
+}
+
+img.pic-message-global.right {
+  right: 20px;
+  top: 25px;
+}
+
+
+
+
+
+
+
+.ion-email {
+  float: right;
+  font-size: 32px;
+  vertical-align: middle;
+}
+
+.message {
+  font-size: 14px;
+}
+
+.message-header {
+  /*white-space: nowrap;*/
+  font-size: 14px;
+}
+.message-detail {
+  /*white-space: nowrap;*/
+  font-size: 10px;
+}
+
+
+.message-detail-check {
+  /*white-space: nowrap;*/
+  position: absolute;
+  right: 10px;
+  font-size: 10px;
+  bottom: -18px;
+}
+
+
+.bar.item-input-inset .item-input-wrapper input {
+  width: 100% !important;
+}
+
+.message-wrapper {
+  position: relative;
+}
+
+.message-wrapper:last-child {
+  margin-bottom: 10px;
+}
+
+
+
+.user-messages-top-icon {
+  font-size: 28px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -3px;
+  right: 5px;
+}
+
+.msg-header-username {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -3px;
+}
+
+input, textarea, .item-input, .item-input-wrapper {
+  background-color: #f4f4f4 !important;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.cf {
+  clear: both !important;
+}
+
+a.autolinker {
+  color: #3b88c3;
+  text-decoration: none;
+}
+
+/* loading */
+.loader-center {
+  height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.loader .ion-loading-c {
+  font-size: 64px;
+}
+
+
+
+/*------------------fin prueba-------------------------*/
+
+
+/*------------------ prueba2-------------------------*/
+
+/*body {
+  cursor: url('http://ionicframework.com/img/finger.png'), auto;
+}*/
+
+/* allows the bar-footer to be elastic /*
+/* optionally set a max-height */
+/* maxlength on the textarea will prevent /*
+/* it from getting too large also */
+/*------------------fin prueba-------------------------*/
+
+
+
+
+
+
+@import "css/myionic.app.css";
+  

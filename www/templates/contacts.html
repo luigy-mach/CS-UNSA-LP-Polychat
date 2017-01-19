@@ -1,0 +1,44 @@
+<ion-view cache-view="false" title="Contacts" >
+    <!--     button DELETE -->
+    <ion-nav-buttons  side="right" >
+      <div class=" buttons" >
+        <button class="button button-icon icon ion-ios-minus-outline"
+                ng-click="data.showDelete = !data.showDelete;" ></button>
+      </div>
+    </ion-nav-buttons>
+    <!-- END button DELETE -->
+
+
+    <ion-content >
+        <ion-list  show-delete="data.showDelete" >
+
+          <!-- REVISAR !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1 -->
+          <!--find -->
+          <ion-item>
+            <label class="item item-input">
+              <i class="icon ion-search placeholder-icon"></i>
+              <input type="text" ng-model="inputfind.filterUser" placeholder="Buscar entre mis amigos">
+            </label>
+          </ion-item>
+          <!--end find -->
+
+
+            <!--item avatar-->
+            <ion-item ng-repeat="friend in friendsList" friend="friend"
+                      class="item item-avatar item-remove-animate item-button-right">
+                  <img src={{friend.contact_photo}}>
+                  <h2>{{friend.contact_name}}</h2>
+                  <!--<p>{{friend.country}}, {{friend.city}} </p>-->
+                  <ion-delete-button class="ion-minus-circled"
+                                     ng-click="deleteFriendButton(friend)"> </ion-delete-button>
+                  <!--<button class="button button-positive icon ion-android-chat"
+                          ng-click="sendMessage(friend)"> </button>
+                  <ion-option-button class="button button-positive icon ion-android-settings"
+                                     ng-click="editFriendButton(item)"></ion-option-button>-->
+
+            </ion-item>
+            <!--end item avatar-->
+        </ion-list>
+    </ion-content>
+
+</ion-view>

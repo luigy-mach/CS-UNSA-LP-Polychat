@@ -1,0 +1,70 @@
+<ion-view cache-view="false" title="Perfil">
+
+  <ion-content>
+
+    <div id="profile-bg" style="background: url({{backgroundPicture}}) ">
+      <p>&nbsp;</p><!--space blank-->
+      <a class="button-right button button-outline icon-left ion-android-expand button-balanced"
+         ng-click='popover.show($event)'>update photo</a> <!--button-balanced ... color verde-->
+      <p>&nbsp;</p><!--space blank-->
+      <p>&nbsp;</p><!--space blank-->
+      <p>&nbsp;</p><!--space blank-->
+      <p>&nbsp;</p><!--space blank-->
+    </div>
+
+    <div id="content">
+      <div id="profile-info">
+        <img id="profile-image" src={{photo}}>
+        <h3 id="profile-name">{{name}}</h3>
+        <span id="profile-description">encuentranos en twitter<a href="polychat@twitter.com">@polychat</a></span>
+        <ionic-ratings ratingsobj='ratingsObject2'></ionic-ratings>
+      </div>
+    </div>
+    <div id="center">
+      <p>&nbsp;</p><!--space blank-->
+      <!--
+      <button class="button button-positive" ng-click="addFriend()">Add-friend</button>
+      <button class="button button-positive" ng-click="message()">message</button>
+      <button class="button button-positive" ng-click="response()">Response</button>-->
+    </div>
+
+    <div class="list">
+
+
+    <label class="item item-input">
+    <span class="input-label">Edad</span>
+    <input type="number" ng-model="age">
+    </label>
+
+    <label class="item item-input">
+    <span class="input-label">Género</span>
+    <input type="text" ng-model="genre">
+    </label>
+
+    <label class="item item-input">
+    <span class="input-label">País</span>
+    <input type="text" ng-model="country">
+    </label>
+
+    <div class="item item-divider">Lenguajes que domina</div>
+    <!--<a class="item">Español</a>-->
+    <a class="item" ng-repeat="lan in nat_lan">{{ lan.country }}</a>
+    <div class="item item-divider">Lenguajes de interés</div>
+    <!--<a class="item">Inglés</a>-->
+    <a class="item" ng-repeat="lan in obj_lan">{{ lan.country }}</a>
+
+    <!--<a class="item">Inglés</a>-->
+    <!-- <div  class=" button-bar" style="width: 285px;"> -->
+    <div  class=" button-bar" >
+          <a style="border-radius:20px 20px 20px 20px;"
+             class="button button-positive  button-block "
+             ng-click="logout()">Logout</a>
+        <!--  end validador de facebook -->
+    </div>
+
+
+    </div>
+
+
+  </ion-content>
+</ion-view>
